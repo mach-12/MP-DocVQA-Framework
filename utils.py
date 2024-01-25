@@ -113,8 +113,8 @@ def check_config(config):
 
 
 def load_config(args):
-    model_config_path = "configs/models/{:}.yml".format(args.model)
-    dataset_config_path = "configs/datasets/{:}.yml".format(args.dataset)
+    model_config_path = "/content/MP-DocVQA-Framework/configs/models/{:}.yml".format(args.model)
+    dataset_config_path = "/content/MP-DocVQA-Framework/configs/datasets/{:}.yml".format(args.dataset)
     model_config = parse_config(yaml.safe_load(open(model_config_path, "r")), args)
     dataset_config = parse_config(yaml.safe_load(open(dataset_config_path, "r")), args)
     training_config = model_config.pop('training_parameters')
